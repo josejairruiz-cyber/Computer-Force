@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Force - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: "#1e40af", secondary: "#0f172a", accent: "#f59e0b" },
+                    fontFamily: { inter: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-gray-50 font-inter min-h-screen flex flex-col">
+
+    <header class="w-full bg-white shadow-sm relative z-50">
+        <div class="w-full px-6 py-4 flex justify-between items-center relative">
+
+            <div class="flex items-center w-1/4 md:hidden">
+               <button id="cartToggle" aria-label="View shopping cart"
+    class="bg-primary text-white p-2 rounded-lg relative hover:bg-blue-800 transition shadow-md w-10 h-10 flex items-center justify-center shrink-0">
+    <i class="fas fa-shopping-cart text-lg"></i>
+    <span class="absolute -bottom-2 -right-2 bg-accent text-gray-900 text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center border-2 border-white">2</span>
+</button>
+            </div>
+
+            <a href="index.html"
+                class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center text-center hover:opacity-80 transition cursor-pointer">
+                <div class="text-3xl mr-2 text-secondary"><i class="fas fa-laptop"></i></div>
+                <h1 class="text-2xl font-bold text-secondary tracking-wide uppercase whitespace-nowrap">COMPUTER-FORCE
+                </h1>
+            </a>
+
+            <div class="flex items-center justify-end space-x-4 w-1/4 ml-auto">
+                <div class="relative hidden md:block w-full max-w-xs">
+                    <input type="text" aria-label="Search products" placeholder="Search products..."
+                        class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    <i class="fas fa-search text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"></i>
+                </div>
+                <button aria-label="View shopping cart"
+                    class="bg-primary text-white p-2 rounded-lg relative hover:bg-blue-800 transition shadow-md w-10 h-10 flex items-center justify-center shrink-0">
+                    <i class="fas fa-shopping-cart text-lg"></i>
+                    <span
+                        class="absolute -bottom-2 -right-2 bg-accent text-gray-900 text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center border-2 border-white">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav id="main-nav" class="hidden md:block w-full bg-gray-100 border-b border-gray-200">
+        <div class="w-full max-w-7xl mx-auto px-4">
+            <div class="md:hidden py-4 border-b border-gray-200">
+                <div class="relative w-full">
+                    <input type="text" aria-label="Search products" placeholder="Search products..."
+                        class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    <i class="fas fa-search text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"></i>
+                </div>
+            </div>
+            
+            <ul class="flex flex-col md:flex-row flex-wrap justify-start md:space-x-8 space-y-4 md:space-y-0 py-4 md:py-3 font-medium text-gray-700">
+                <li><a href="products.html" class="hover:text-primary transition">Products</a></li>
+                <li><a href="register.html" class="hover:text-primary transition">Register</a></li>
+                <li><a href="about.html" class="hover:text-primary transition">About</a></li>
+                <li><a href="developer.html" class="text-primary font-bold">Jose Jair Ruiz Sanchez</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="w-full max-w-7xl mx-auto px-4 py-8 flex-grow">
+        <div class="flex flex-col lg:flex-row gap-8 items-start">
+
+            <main class="w-full lg:w-3/4">
+                <section class="mb-8 text-center lg:text-left">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Welcome to Computer-Force</h2>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Computer Force is your online expert in all things computing.
+                    </p>
+                </section>
+
+                <h2 class="text-2xl font-bold text-secondary mb-6 border-b pb-2">Featured Products</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div
+                        class="bg-white rounded-lg shadow p-4 border border-gray-100 product-card hover:shadow-lg transition">
+                        <a href="products.html#Computers" class="block cursor-pointer">
+                            <div class="h-48 w-full bg-white rounded mb-4 flex items-center justify-center p-2">
+                                <img src="images/Computers.jpeg" alt="Computers"
+                                    class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="font-bold text-lg text-gray-800 hover:text-primary transition">Computers</h3>
+                        </a>
+                        <button class="w-full bg-primary text-white py-2 rounded mt-2 hover:bg-blue-800">Add to
+                            Cart</button>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-lg shadow p-4 border border-gray-100 product-card hover:shadow-lg transition">
+                        <a href="products.html#laptops" class="block cursor-pointer">
+                            <div class="h-48 w-full bg-white rounded mb-4 flex items-center justify-center p-2">
+                                <img src="images/Laptops.jpeg" alt="Laptops"
+                                    class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="font-bold text-lg text-gray-800 hover:text-primary transition">Laptops</h3>
+                        </a>
+                        <button class="w-full bg-primary text-white py-2 rounded mt-2 hover:bg-blue-800">Add to
+                            Cart</button>
+                    </div>
+
+                    <div
+                        class="bg-white rounded-lg shadow p-4 border border-gray-100 product-card hover:shadow-lg transition">
+                        <a href="products.html#Monitors" class="block cursor-pointer">
+                            <div class="h-48 w-full bg-white rounded mb-4 flex items-center justify-center p-2">
+                                <img src="images/Monitors.jpeg" alt="Monitors"
+                                    class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="font-bold text-lg text-gray-800 hover:text-primary transition">Monitors</h3>
+                        </a>
+                        <button class="w-full bg-primary text-white py-2 rounded mt-2 hover:bg-blue-800">Add to
+                            Cart</button>
+                    </div>
+                    <div
+                        class="bg-white rounded-lg shadow p-4 border border-gray-100 product-card hover:shadow-lg transition">
+                        <a href="products.html#Printing & Scanning" class="block cursor-pointer">
+                            <div class="h-48 w-full bg-white rounded mb-4 flex items-center justify-center p-2">
+                                <img src="images/Printing & Scanning.jpeg" alt="Printing & Scanning"
+                                    class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="font-bold text-lg text-gray-800 hover:text-primary transition">Printing &
+                                Scanning</h3>
+                        </a>
+                        <button class="w-full bg-primary text-white py-2 rounded mt-2 hover:bg-blue-800">Add to
+                            Cart</button>
+                    </div>
+                    <div
+                        class="bg-white rounded-lg shadow p-4 border border-gray-100 product-card hover:shadow-lg transition">
+                        <a href="products.html#Software" class="block cursor-pointer">
+                            <div class="h-48 w-full bg-white rounded mb-4 flex items-center justify-center p-2">
+                                <img src="images/Software.jpeg" alt="Software"
+                                    class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="font-bold text-lg text-gray-800 hover:text-primary transition">Software</h3>
+                        </a>
+                        <button class="w-full bg-primary text-white py-2 rounded mt-2 hover:bg-blue-800">Add to
+                            Cart</button>
+                    </div>
+                    <div
+                        class="bg-white rounded-lg shadow p-4 border border-gray-100 product-card hover:shadow-lg transition">
+                        <a href="products.html#Tablets" class="block cursor-pointer">
+                            <div class="h-48 w-full bg-white rounded mb-4 flex items-center justify-center p-2">
+                                <img src="images/Tablets.jpeg" alt="Tablets"
+                                    class="max-h-full max-w-full object-contain">
+                            </div>
+                            <h3 class="font-bold text-lg text-gray-800 hover:text-primary transition">Tablets</h3>
+                        </a>
+                        <button class="w-full bg-primary text-white py-2 rounded mt-2 hover:bg-blue-800">Add to
+                            Cart</button>
+                    </div>
+                </div>
+            </main>
+
+            <aside class="w-full lg:w-1/4 bg-white rounded-xl shadow-lg p-6 sticky top-4 border border-gray-100">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Purchases</h2>
+                <table class="w-full mb-6 border-collapse">
+                    <thead>
+                        <tr class="text-gray-500 text-sm border-b border-gray-100">
+                            <th class="text-left font-medium pb-3">Item</th>
+                            <th class="text-right font-medium pb-3">Price(AUD)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr>
+                            <td class="py-3 text-left">Laptop Pro</td>
+                            <td class="py-3 text-right font-semibold text-primary">$1000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 text-left">Laptop Air</td>
+                            <td class="py-3 text-right font-semibold text-primary">$1500</td>
+                        </tr>
+                        <tr class="border-t border-gray-200">
+                            <td class="pt-4 text-left text-lg font-bold text-gray-900">Total</td>
+                            <td class="pt-4 text-right text-lg font-bold text-primary">$2500</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button
+                    class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-800 transition shadow-md flex items-center justify-center">
+                    <i class="fas fa-lock mr-2"></i> Go to Checkout
+                </button>
+            </aside>
+
+        </div>
+    </div>
+
+    <footer class="w-full bg-secondary text-white py-6 mt-auto">
+        <div class="w-full max-w-7xl mx-auto px-4 text-center font-medium">
+            <p>&copy; 2026 Computer-Force. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
